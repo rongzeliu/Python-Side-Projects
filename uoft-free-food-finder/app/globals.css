@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b1f3a;
+  --cream: #f6f1e8;
+  --gold: #e8b84a;
+  --tomato: #c94c2a;
+  --ink: #1d2433;
+  --muted: #5c6573;
+  --line: #e4d9c8;
+  --background: var(--cream);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #fff7e6 0%, transparent 55%),
+    radial-gradient(800px 400px at 100% 0%, #f3d7c4 0%, transparent 45%),
+    var(--cream);
+  color: var(--ink);
+  font-family: var(--font-outfit), Outfit, system-ui, sans-serif;
+}
+
+h1,
+h2,
+.font-display {
+  font-family: var(--font-display), Fraunces, Georgia, serif;
+}
+
+.field {
+  border-radius: 0.85rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+}
+
+.field:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 55%, white);
+}
+
+.badge {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  background: #eee7da;
+}
+
+.badge-now {
+  background: #12835a;
+  color: white;
+}
+
+.badge-today {
+  background: var(--tomato);
+  color: white;
+}
+
+.badge-soon {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.leaflet-container {
+  font-family: inherit;
+  background: #e8efe6;
+}
+
+.food-pin {
+  background: transparent;
+  border: none;
+}
+
+.food-pin-inner {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.18);
+  font-size: 20px;
+  border: 2px solid var(--navy);
+}
+
+.food-pin-inner.now {
+  border-color: #12835a;
+  transform: scale(1.08);
+}
+
+.food-pin-inner.today {
+  border-color: var(--tomato);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 16px;
+}
