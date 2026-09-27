@@ -10,3 +10,7 @@ Project 1. Python PDF reader
 
 Project 2. Python Hangman game
 -- The program picks a random word from a word library and the user can click on the keyboard to guess letters
+
+Project 3. WeatherTeller 
+-- Uses OpenWeatherMap's API data 
+-- Users can inquire about temperature, humidity and condition about any city 
